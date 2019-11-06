@@ -1,0 +1,276 @@
+{
+	"variables": [],
+	"info": {
+		"name": "RBS Application",
+		"_postman_id": "e2516ba0-9261-0b92-36d4-1b9b9d595a56",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sorting on Emp Name ( ordering is natural as no specified order in request )",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/rbs/internal/allEmployees?sortingParameter=name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rbs",
+						"internal",
+						"allEmployees"
+					],
+					"query": [
+						{
+							"key": "sortingParameter",
+							"value": "name",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sorting on Emp Name in reversed order",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/rbs/internal/allEmployees?sortingParameter=name&order=reverse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rbs",
+						"internal",
+						"allEmployees"
+					],
+					"query": [
+						{
+							"key": "sortingParameter",
+							"value": "name",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "order",
+							"value": "reverse",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Incorrect order with request",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/rbs/internal/allEmployees?sortingParameter=name&order=abc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rbs",
+						"internal",
+						"allEmployees"
+					],
+					"query": [
+						{
+							"key": "sortingParameter",
+							"value": "name",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "order",
+							"value": "abc",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "No Sorting ( Default the way data are stored )",
+			"request": {
+				"url": "http://localhost:8080/rbs/internal/allEmployees",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sorting on empSalary in reversed Order",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/rbs/internal/allEmployees?sortingParameter=salary&order=reverse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rbs",
+						"internal",
+						"allEmployees"
+					],
+					"query": [
+						{
+							"key": "sortingParameter",
+							"value": "salary",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "order",
+							"value": "reverse",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sorting on Hiring Date in reversed Order",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/rbs/internal/allEmployees?sortingParameter=hiringDate&order=reverse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rbs",
+						"internal",
+						"allEmployees"
+					],
+					"query": [
+						{
+							"key": "sortingParameter",
+							"value": "hiringDate",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "order",
+							"value": "reverse",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sorting on Hiring Date in natural Order (no ordering provided in request)",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/rbs/internal/allEmployees?sortingParameter=hiringDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rbs",
+						"internal",
+						"allEmployees"
+					],
+					"query": [
+						{
+							"key": "sortingParameter",
+							"value": "hiringDate",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sorting on Hiring Date in natural Order (ordering \"natural\" provided in request)",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/rbs/internal/allEmployees?sortingParameter=hiringDate&order=natural",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rbs",
+						"internal",
+						"allEmployees"
+					],
+					"query": [
+						{
+							"key": "sortingParameter",
+							"value": "hiringDate",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "order",
+							"value": "natural",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
